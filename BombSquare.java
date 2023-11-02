@@ -1,5 +1,4 @@
 import java.util.*;
-
 import javax.swing.ImageIcon;
 
 public class BombSquare extends GameSquare
@@ -33,8 +32,6 @@ public class BombSquare extends GameSquare
 					numSurroundBomb++;
 					}
 				}
-				
-			
 			}
 		}
         return numSurroundBomb;
@@ -51,11 +48,12 @@ public class BombSquare extends GameSquare
 		//else call calculate bomb funct and display corresponding img
 		else{
 			numSurroundBomb = calculateSurroundBomb();
+
 			switch(numSurroundBomb){
 				case(0):
 					setImage("images/0.png");
-					// open surrounding square
 
+					// open surrounding square
 					for (int i = this.yLocation -1; i<= this.yLocation + 1; i++){
 						for (int j = this.xLocation -1; j<= this.xLocation + 1; j++){
 							
@@ -72,6 +70,7 @@ public class BombSquare extends GameSquare
 						}
 					}
 					break;
+					
 				case(1):
 					setImage("images/1.png");
 					break;
